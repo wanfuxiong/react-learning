@@ -16,9 +16,14 @@ class Welcome extends React.Component<IProps, IState> {
     // 生命周期
     componentDidMount() {
         // setInterval(() => {
-        //     this.setState({ age: this.state.age + 1 });
+        //     // this.setState({ age: this.state.age + 1 });
+        //     this.setState((state, props) => ({ age: state.age + 1 }));
         // }, 100);
     }
+
+    handleClick = () => {
+        this.setState((state, props) => ({ age: state.age + 1 }));
+    };
 
     render() {
         return (
@@ -26,13 +31,7 @@ class Welcome extends React.Component<IProps, IState> {
                 <h1>
                     Hello, {this.props.name}, {this.state.age}
                 </h1>
-                <button
-                    onClick={(e) => {
-                        this.setState({ age: this.state.age + 1 });
-                    }}
-                >
-                    +1
-                </button>
+                <button onClick={this.handleClick}>+1</button>
             </div>
         );
     }
