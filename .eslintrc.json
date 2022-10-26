@@ -5,7 +5,7 @@
         "node": true
     },
     "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-    "plugins": ["vue", "@typescript-eslint"],
+    "plugins": ["@typescript-eslint"],
     "rules": {
         "@typescript-eslint/ban-ts-comment": "warn",
         "@typescript-eslint/no-non-null-assertion": "off",
